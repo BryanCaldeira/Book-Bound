@@ -37,6 +37,9 @@
       <form method="post" id="form">{% csrf_token %}</form>
       <p id='warntag' style="color: red; text-align: center; margin-top: 10px;font-weight: 600"></p>
       <p id='sin_warntag' style="color: red; text-align: center; margin-top: 10px;font-weight: 600;"></p>
+      {% if user == 3 %}
+        <script>alert('Invalid Credentials');</script>
+      {% endif %}
     </div>
     {% if user == 1 %}
       <script>alert('You already have a account');</script>
