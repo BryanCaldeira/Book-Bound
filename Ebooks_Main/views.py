@@ -6,7 +6,7 @@ from Login_app import views as login_views
 class Next_Val:
 	Next=0
 	def Inc(self):
-		if self.Next<2:
+		if self.Next<3:
 			self.Next=self.Next+1
 		return self.Next
 
