@@ -15,7 +15,7 @@ SECRET_KEY = '^zv)$n-u!9vz#&j2p%7&gpbljvr9(dkff$(oz9ql2wbr##-4bj'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['book-bound.herokuapp.com/']
+ALLOWED_HOSTS = ['book-bound.herokuapp.com']
 
 
 INSTALLED_APPS = [
