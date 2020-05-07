@@ -69,6 +69,15 @@ img{
 }
 
 
+
+#next:active{
+	box-shadow: 0 0 0 2px white;
+}
+
+#back:active{
+	box-shadow: 0 0 0 2px white;
+}
+
 #pagecount{
 	float: top;
 	margin-top: -60px;
