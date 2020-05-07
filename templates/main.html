@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#7CB6E2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'JS/scroll.js' %}"></script>
+    <title>Ebooks</title>
+  </head>
+  <body>
+  	<nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <p id="brand">Book Bound</p>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active" id="logout"><a href="{% url 'lout' %}">LogOut</a></li>
+          </ul>
+        </div>
+      </div>   
+    </nav>
+    <div class="container" align="center">
+
+        {% if Next == 1 %}
+
+        {% include 'Page1.html' %} 
+
+        {% elif Next == 2 %}
+          {% include 'Page2.html' %}
+
+        {% elif Next == 3 %}
+          {% include 'Page3.html' %}
+
+        {% endif %}
+       
+	  </div>
+    <div align="center">
+      <a href="{% url 'Back' %}"> <img src="{% static 'css/images/back.png' %}" id="back"></a>
+      <a href="{% url 'Next' %}"> <img src="{% static 'css/images/next.png' %}" id="next"></a>
+      <p id="pagecount" style="color: white">{{Next}}</p>
+      <a id="back2Top" title="Back to top" href="#"><img src="{% static 'css/images/arrow1.png' %}" style="box-shadow: none; width: 90px; height: 70px"></a>
+    </div>
+
+  </body>
+</html>
+

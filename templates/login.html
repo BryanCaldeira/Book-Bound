@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#7CB6E2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'JS/login.js' %}"></script>
+    <title>Login</title>
+  </head>
+  <body onload="sin()">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <p id="brand">Book Bound</p>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active" id="devop"><a href="{% url 'devop' %}">Developer</a></li>
+          </ul>
+        </div>
+      </div>   
+    </nav>
+    <div class="container" id="cnt">
+      <button style="margin-top: 40px;margin-left: 7%;" id="sin" onclick="sin()">Sign In</button>
+      <button id="sup" onclick="sup()">Sign Up</button>
+      <form method="post" id="form">{% csrf_token %}</form>
+      <p id='warntag' style="color: red; text-align: center; margin-top: 10px;font-weight: 600"></p>
+      <p id='sin_warntag' style="color: red; text-align: center; margin-top: 10px;font-weight: 600;"></p>
+    </div>
+    {% if user == 1 %}
+      <script>alert('You already have a account');</script>
+    {% elif user == 2 %}
+      <script>alert('Account successfully created');</script>
+    {% endif %}
+  </body>
+</html>
