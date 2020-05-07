@@ -13,7 +13,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 SECRET_KEY = '^zv)$n-u!9vz#&j2p%7&gpbljvr9(dkff$(oz9ql2wbr##-4bj'
 
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['book-bound.herokuapp.com']
 
