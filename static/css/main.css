@@ -60,22 +60,24 @@ img{
 #next{
 	width: 70px;
 	height: 70px;
+	border-radius: 100%;
 }
 
 #back{
 	width: 70px;
 	height: 70px;
 	margin-left: 40px;
+	border-radius: 100%;
 }
 
 
 
 #next:active{
-	box-shadow: 0 0 0 2px white;
+	box-shadow: 0 0 5px 2px white;
 }
 
 #back:active{
-	box-shadow: 0 0 0 2px white;
+	box-shadow: 0 0 5px 2px white;
 }
 
 #pagecount{
