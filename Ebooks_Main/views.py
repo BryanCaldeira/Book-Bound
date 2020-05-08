@@ -11,7 +11,7 @@ class Next_Val:
 		return self.Next
 
 	def Dec(self):
-		if self.Next>2:
+		if self.Next>1:
 			self.Next=self.Next-1
 		return self.Next
 
