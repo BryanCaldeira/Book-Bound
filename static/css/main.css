@@ -53,6 +53,10 @@ img{
 	box-shadow: 0 0 5px 2px red;
 }
 
+img:active{
+	box-shadow: 0 0 5px 2px white;
+}
+
 
 
 
