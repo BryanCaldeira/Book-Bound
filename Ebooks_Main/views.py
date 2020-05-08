@@ -8,12 +8,12 @@ class Next_Val:
 	def Inc(self):
 		if self.Next<3:
 			self.Next=self.Next+1
-			return self.Next
+		return self.Next
 
 	def Dec(self):
 		if self.Next>1:
 			self.Next=self.Next-1
-			return self.Next
+		return self.Next
 
 	def Reset(self):
 		self.Next=0
